@@ -21,7 +21,16 @@
     <%= form.number_field :published_year %>
   </div>
 
+  <div class="field">
+    <%= form.label :author %>
+    <%= collection_select(:book, :author_id, Author.all, :id, :name, prompt: true) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+ 
 <% end %>
+
+
